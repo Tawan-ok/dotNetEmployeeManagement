@@ -1,0 +1,31 @@
+@model EmployeeManagement.Models.Employee
+@{
+    ViewData["Title"] = "Create Employee";
+}
+
+<h2 class="text-center">Add New Employee</h2>
+
+<form asp-action="Create" method="post" class="w-50 mx-auto">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input asp-for="Name" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input asp-for="Email" type="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Position</label>
+        <input asp-for="Position" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Salary</label>
+        <input asp-for="Salary" type="number" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="/Employee" class="btn btn-secondary">Cancel</a>
+</form>

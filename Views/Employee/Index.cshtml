@@ -1,0 +1,33 @@
+@model IEnumerable<EmployeeManagement.Models.Employee>
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2 class="text-center">Employee List</h2>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Name</td>
+                <td>@emp.Email</td>
+                <td>@emp.Position</td>
+                <td>@emp.Salary.ToString("C")</td>
+                <td>
+                    <a href="/Employee/Edit/@emp.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="/Employee/Delete/@emp.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
