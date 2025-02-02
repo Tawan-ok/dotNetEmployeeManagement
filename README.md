@@ -89,7 +89,3 @@ dotnet run
 ## 🤝 **Contributing**
 Pull requests are welcome! If you find any issues, please open an [issue](https://github.com/YOUR_GITHUB_USERNAME/EmployeeManagement/issues).
 
----
-
-## 📜 **License**
-This project is licensed under the **MIT License**.
